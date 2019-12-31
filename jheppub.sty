@@ -16,38 +16,36 @@
 %
 % This work consists of the file jheppub.sty.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{jheppub}[2013/03/21 r534]
+\ProvidesPackage{jheppub}[2018/12/04 v.1.1227]
 
 
 \gdef\@fpheader{}
-%Prepared for submission to JHEP
 \gdef\@journal{jhep}
 
 \newif\ifnotoc\notocfalse
 \newif\ifemailadd\emailaddfalse
 \newif\iftoccontinuous\toccontinuousfalse
-%\newif\ifnatbibsort\natbibsorttrue
+\newif\ifnatbibsort\natbibsorttrue
 
-%\DeclareOption{no-natbib-sort}{\natbibsortfalse}
+\DeclareOption{no-natbib-sort}{\natbibsortfalse}
 \ProcessOptions\relax
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{epsfig}
 \RequirePackage{graphicx}
-%\ifnatbibsort\RequirePackage[numbers,sort&compress]{natbib}\else\RequirePackage[numbers,compress]{natbib}\fi
-\RequirePackage{color}
+\ifnatbibsort\RequirePackage[numbers,sort&compress]{natbib}\else\RequirePackage[numbers,compress]{natbib}\fi
 \RequirePackage[colorlinks=true
-,urlcolor=blue
-,anchorcolor=blue
-,citecolor=blue
-,filecolor=blue
-,linkcolor=blue
-,menucolor=blue
-,pagecolor=blue
-,linktocpage=true
-,pdfproducer=medialab
-,pdfa=true
+  ,urlcolor=blue
+  ,anchorcolor=blue
+  ,citecolor=blue
+  ,filecolor=blue
+  ,linkcolor=blue
+  ,menucolor=blue
+  ,pagecolor=blue
+  ,linktocpage=true
+  ,pdfproducer=medialab
+  ,pdfa=true
 ]{hyperref}
 
 \def\@subheader{\@empty}
@@ -158,7 +156,7 @@
 %this is the ``itemsep'' of the affiliations list
 \newlength{\affiliationsSep}\setlength{\affiliationsSep}{-3pt}
 %this hook is needed if the toc starts on the first page
-\newcommand\beforetochook{\pagestyle{myplain}\pagenumbering{roman}}%roman
+\newcommand\beforetochook{\pagestyle{myplain}\pagenumbering{roman}}
 
 \DeclareFixedFont\trfont{OT1}{phv}{b}{sc}{11}
 
@@ -184,11 +182,13 @@
 \afterRuleSpace
 % Collaboration
 
-
+% -----------------------------
+% Insert content
 
 {\raggedright\sffamily{Course delivered in the 2013/14 academic year by}\par}
 \afterAuthorSpace
 
+% -----------------------------
 
 \if!\@collaboration!\else
 {\Large\bfseries\sffamily\raggedright\@collaboration}\par
@@ -226,16 +226,8 @@
 \fi
 \afterEmailSpace
 
-
-
-
-
-
-
-
-
-
-
+% -----------------------------
+% Insert content
 
 {\raggedright\sffamily{Notes taken by Simon Rea}\par}
 \afterAuthorSpace
@@ -248,15 +240,7 @@
 \vfill
 {\sffamily \noindent\ Last updated on \today}
 
-
-
-
-
-
-
-
-
-
+% -----------------------------
 
 %Erratum or addendum
 \if!\@xtum!\else\noindent{\@xtum}\afterXtumSpace\fi
@@ -265,34 +249,17 @@
 % Keywords
 \if!\@keywords!\else\noindent{\textsc{Keywords:}} \@keywords\afterKeywordsSpace\fi
 % Arxivnumber
-\if!\@arxivnumber!\else\noindent{\textsc{ArXiv ePrint:}} \href{http://arxiv.org/abs/\@arxivnumber}{\@arxivnumber}\afterArxivSpace\fi
+\if!\@arxivnumber!\else\noindent{\textsc{ArXiv ePrint:}} \href{https://arxiv.org/abs/\@arxivnumber}{\@arxivnumber}\afterArxivSpace\fi
 % Dedication
 \if!\@dedicated!\else\vbox{\small\it\raggedleft\@dedicated}\afterDedicatedSpace\fi
-%
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+% -----------------------------
+% Insert content
 
 \acknowledgments
-%\addcontentsline{toc}{section}{Acknowledgements}
-This set of lecture notes accompanies Frederic Schuller's course on the ``Geometric anatomy of theoretical physics'', taught in the academic year 2013/14 at the Friedrich-Alexander-Universit\"at Erlangen-N\"urnberg.
+This set of lecture notes accompanies Frederic Schuller's course on the 
+``Geometric anatomy of theoretical physics'', taught in the academic year 
+2013/14 at the Friedrich-Alexander-Universit\"at Erlangen-N\"urnberg.
 
 The entire course is hosted on YouTube at the following address:
 \begin{center}
@@ -300,52 +267,39 @@ The entire course is hosted on YouTube at the following address:
 \end{center}
 These lecture notes are not endorsed by Dr. Schuller or the University.
 
-While I have tried to correct typos and errors made during the lectures (some helpfully pointed out by YouTube commenters), I have also taken the liberty to add and/or modify some of the material at various points in the notes. Any errors that may result from this are, of course, mine.
+While I have tried to correct typos and errors made during the lectures (some 
+helpfully pointed out by YouTube commenters), I have also taken the liberty 
+to add and/or modify some of the material at various points in the notes. Any 
+errors that may result from this are, of course, mine.
 
-If you have any comments regarding these notes, feel free to get in touch. Visit my blog for the most up to date version of these notes
+If you have any comments regarding these notes, feel free to get in touch. 
+Visit my blog for the most up to date version of these notes
 \begin{center}
 \url{http://mathswithphysics.blogspot.com}
 \end{center}
 
-My gratitude goes to Dr. Schuller for lecturing this course and for making it available on YouTube.\\
+My gratitude goes to Dr. Schuller for lecturing this course and for making it 
+available on YouTube.\\
 
-\hfill {\ECFJD \Large Simon Rea ~~~}
+\hfill {\Large \emph{Simon Rea} ~~~}
 \newpage
 
+% -----------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%
 \ifnotoc\else
 \iftoccontinuous\else\newpage\fi
-
 \beforetochook\hrule
 \tableofcontents
 \afterTocSpace
 \hrule
 \afterTocRuleSpace
 \fi
-
 \setcounter{footnote}{0}
+% -----------------------------
+% Insert content
 \newpage
+% -----------------------------
 \pagestyle{myplain}\pagenumbering{arabic}
 } % close the \renewcommand\maketitle{
 
@@ -368,7 +322,7 @@ My gratitude goes to Dr. Schuller for lecturing this course and for making it av
 \renewcommand\bottomfraction{.6}
 \setcounter{totalnumber}{5}
 \renewcommand\textfraction{0}
-\renewcommand\floatpagefraction{1}
+\renewcommand\floatpagefraction{0.8}
 
 \textwidth  .72\paperwidth
 \setlength\@tempdima{.76\paperheight}
@@ -441,10 +395,10 @@ My gratitude goes to Dr. Schuller for lecturing this course and for making it av
                                    {1.75ex \@plus1ex \@minus.2ex}%
                                    {-1em}%
                                    {\normalfont\normalsize\bfseries}}
-\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}%
                                    {1.75ex \@plus1ex \@minus .2ex}%
                                    {-1em}%
-                                   {\normalfont\normalsize\bfseries}}
+                                   {\normalfont\normalsize\itshape}}
 
 
 %Caption of figure and table
