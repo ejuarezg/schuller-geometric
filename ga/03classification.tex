@@ -10,7 +10,7 @@ Let $A,B$ be sets. A \emph{map}\index{map} $\phi \cl A \to B$ is a relation such
 The standard notation for a map is:
 \bi{rrCl}
 \phi \cl & A & \to & B\\
-& a & \mapsto & \phi(a)
+& a & \mapsto & \phi(a) := b
 \ei
 which is technically an abuse of notation since $\phi$, being a relation of two variables, should have two arguments and produce a truth value. However, once we agree that for each $a\in A$ there exists exactly one $b\in B$ such that $\phi(a,b)$ is true, then for each $a$ we can define $\phi(a)$ to be precisely that unique $b$. It is sometimes useful to keep in mind that $\phi$ is actually a relation.
 
@@ -90,7 +90,7 @@ and:
 Thus $\xi \circ (\psi\circ\phi) = (\xi \circ\psi)\circ\phi $.
 \eq
 
-The operation of composition is necessary in order to defined inverses of maps.
+The operation of composition is necessary in order to define inverses of maps.
 
 \bd
 Let $\phi \cl A \to B$ be a bijection. Then the \emph{inverse} of $\phi$, denoted $\phi^{-1}$, is defined (uniquely) by:
@@ -312,6 +312,26 @@ P \cl & \N^* & \to & \N\\
 We have $P(2) = P(\{\{\vn\}\})=\{\vn\}=1$.
 \ee
 
+\br
+As mentioned in \Cref{rem:natural_numbers_std_form}, the modern formulation of
+the set of natural numbers looks like:
+\bse
+\N := \{\vn, \{\vn\}, \{\vn,\{\vn\}\}, \{\vn,\{\vn\},\{\vn,\{\vn\}\}\}, \ldots \}
+\ese 
+Using this formulation for $\N$, the \emph{successor map} is defined by:
+\bi{rcCl}
+S \cl & \N & \to & \N\\
+& n & \mapsto & \bigcup \{n,\{n\}\}.
+\ei
+
+% TODO Check if this is right!
+% The \emph{predecessor map} $P$ on $\N^*$ is defined by:
+% \bi{rcCl}
+% P \cl & \N^* & \to & \N\\
+% & n & \mapsto & n \sm \{n-1\}.
+% \ei
+% \er
+
 \bd
 Let $n \in \N$. The \emph{$n$-th power} of $S$, denoted $S^n$, is defined recursively by:
 \bi{ll}
@@ -333,7 +353,7 @@ The \emph{addition} operation on $\N$ is defined as a map:
 \be
 We have:
 \bse
-2+1=S^1(2)=S(2)=3
+2+1=S^1(2)=S(S^0(2))=S(2)=3
 \ese
 and:
 \bse
@@ -361,7 +381,7 @@ Let $\sim$ be the relation on $\N\times \N$ defined by:
 It is easy to check that this is an equivalence relation as:
 \ben
 \item[i)] $(m,n) \sim(m,n)$ since $m+n=m+n$;
-\item[ii)] $(m,n) \sim(p,q) \imp (p,q)\sim(m,n)$ since $m+q=p+n\eqv p+n=m+q$;
+\item[ii)] $(m,n) \sim(p,q) \eqv (p,q)\sim(m,n)$ since $m+q=p+n\eqv p+n=m+q$;
 \item[iii)] $((m,n) \sim(p,q) \land (p,q)\sim(r,s)) \imp (m,n) \sim(r,s)$ since we have:
 \bse
 m+q=p+n \land p+s=r+q,
