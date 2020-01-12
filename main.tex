@@ -1,24 +1,27 @@
 \documentclass[a4paper,11pt]{article}
-\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
-             % images in pdf, png or jpg format)
+% if your are submitting a pdflatex (i.e. if you have images in pdf, png or
+% jpg format)
+\pdfoutput=1
 
 % ------------------------------
 % Main packages and options
 % ------------------------------
 
-\usepackage{jheppub} % for details on the use of the package, please
-                     % see the JHEP-author-manual
+% for details on the use of the package, please see the JHEP-author-manual
+\usepackage{jheppub}
 
-\usepackage[T1]{fontenc} % if needed
+% if needed
+\usepackage[T1]{fontenc}
 
 % ------------------------------
 % Extra packages and options
 % ------------------------------
+% Some packages here are already included by the JHEP package
 
 % Required for alphabetical index at end of document
 \usepackage{imakeidx}
 \indexsetup{firstpagestyle=empty}
-\makeindex[intoc, columns=2, title=Alphabetical Index, options= -s index_style.ist]
+\makeindex[intoc,columns=2,title=Alphabetical Index,options=-s index_style.ist]
 
 % Required for including images
 \usepackage{graphicx}
@@ -57,7 +60,6 @@
 \usetikzlibrary{positioning}
 \tikzset{>=stealth}
 
-
 \usepackage{cancel}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
@@ -66,13 +68,12 @@
 \makeatother
 
 \usepackage{bm}
-
 \usepackage{calc}
 
 \pgfplotsset{compat=1.14}
 
 % ------------------------------
-%	Theorem styles
+% Theorem styles
 % ------------------------------
 
 % Define theorem styles here based on the definition style (used for
@@ -97,23 +98,32 @@
 \newtheorem*{solution}{Solution}
 
 % ------------------------------
-%	Hyperlink style
+% Hyperlink style
 % ------------------------------
 
+% Override some hyperref preferences
 \usepackage{hyperref}
 \hypersetup{
-  % draft, % Uncomment to remove all links (useful for printing in black and white)
-  colorlinks=true, linkcolor=black, breaklinks=true,
+  % Uncomment to remove all links (useful for printing in black and white)
+  % draft,
+  colorlinks=true,
+  linkcolor=black,
+  breaklinks=true,
   linktoc=all,
-  bookmarks=true,bookmarksnumbered=true,
-  %urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, % Link colors
-  pdftitle={}, % PDF title
-  pdfauthor={\textcopyright}, % PDF Author
-  pdfsubject={}, % PDF Subject
-  pdfkeywords={}, % PDF Keywords
-  pdfencoding=unicode, %
-  pdfstartview={FitH}, %
-  pdfcreator={pdfLaTeX}, % PDF Creator
+  % Already enabled by another package like JHEP package
+  % bookmarks=true,
+  bookmarksnumbered=true,
+  % Link colors
+  % urlcolor=webbrown,
+  % linkcolor=RoyalBlue,
+  % citecolor=webgreen,
+  pdftitle={},
+  pdfauthor={\textcopyright},
+  pdfsubject={},
+  pdfkeywords={},
+  pdfencoding=unicode,
+  pdfstartview={FitH},
+  pdfcreator={pdfLaTeX},
 }
 
 % ------------------------------
