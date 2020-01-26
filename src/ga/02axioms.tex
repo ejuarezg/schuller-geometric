@@ -136,7 +136,7 @@ These are the three conditions that a sequence of propositions must satisfy in o
 \bq(Formal)
 We begin with a tautology.
 \bi{rCll}
-q_1 & \eqv & y\notin x \imp \forall \, y : (y \in x \imp y \in x') \qquad & \t{(T)}\\
+q_1 & \eqv & \forall \, y\notin x \imp \forall \, y : (y \in x \imp y \in x') \qquad & \t{(T)}\\
 q_2 & \eqv & \forall \, y : y \notin x & \t{(A) using $a_1$}\\
 q_3 & \eqv & \forall \, y : (y \in x \imp y \in x') & \t{(M) using $q_1$ and $q_2$}
 \ei
@@ -150,7 +150,7 @@ q_3 \eqv x \se x'.
 \ese
 The next three steps are very similar to the first three:
 \bi{rCll}
-q_4 & \eqv & y\notin x' \imp \forall \, y : (y \in x' \imp y \in x) \qquad & \t{(T)}\\
+q_4 & \eqv & \forall \, y\notin x' \imp \forall \, y : (y \in x' \imp y \in x) \qquad & \t{(T)}\\
 q_5 & \eqv & \forall \, y : y \notin x' & \t{(A) using $a_2$}\\
 q_6 & \eqv & \forall \, y : (y \in x' \imp y \in x) & \t{(M) using $q_4$ and $q_5$}
 \ei
