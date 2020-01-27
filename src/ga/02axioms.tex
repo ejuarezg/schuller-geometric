@@ -327,6 +327,21 @@ x\times y \se \cP\left(\cP\left(\bigcup\,\{x, y\}\right)\right).
 Hence, the existence of $x\times y$ as a set follows from the axioms on unions, pair sets, power sets and the principle of restricted comprehension.
 \er
 
+\be
+Let $x = \{a\}$ and $y = \{b\}$. Then $\bigcup\,\{x, y\} = \{a, b\}$ and
+\bi{rCl}
+\cP\left(\bigcup\,\{x, y\}\right) & = & \{\vn,\{a\},\{b\},\{a,b\}\}.
+\ei
+Taking the power set of this result gives
+\bi{rCl}
+\cP\left(\cP\left(\bigcup\,\{x, y\}\right)\right) & = & \{\dots, \{\{a\}, \{a, b\}\}, \dots, \{\{b\}, \{a, b\}\}\}.
+\ei
+Thus, clearly,
+\bse
+x\times y = \{\{\{a\}, \{a, b\}\}, \{\{b\}, \{a, b\}\}\} \se \cP\left(\cP\left(\bigcup\,\{x, y\}\right)\right).
+\ese
+\ee
+
 \textbf{Axiom of infinity.}\index{infinity}\index{axiom!of infinity} \emph{There exists a set that contains the empty set and,  together with every other element $y$, it also contains the set $\{y\}$ as an element. In symbols:}
 \bse
 \exists \, x : \vn \in x \land \forall \, y : (y\in x \imp \{y\} \in x).
