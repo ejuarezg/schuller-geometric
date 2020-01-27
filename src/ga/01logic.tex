@@ -66,6 +66,7 @@ Of course, you may be wondering why on earth we would want to define the implica
 The answer to this is hidden in the following result.
 
 \bt
+\label{thm:proof_by_contradiction}
 Let $p,q$ be propositions.
 Then $(p\imp q) \eqv ((\neg q)\imp (\neg p))$.
 \et
@@ -295,3 +296,29 @@ Any axiomatic system powerful enough to encode elementary arithmetic is either i
 \et
 
 An example of an undecidable proposition is the Continuum hypothesis within the Zermelo-Fraenkel axiomatic system.  
+
+\subsection{Summary}
+
+This chapter discussed proposotional logic, predicate logic, and axiomatic
+systems. Among these subjects, we learned that
+\begin{itemize}
+\item a proposition is a variable that can take the values true or false;
+\item new propositions can be constructed from given propositions using
+logical operators;
+\item there exists four unary operators: negation, identity tautology, and
+contradiction;
+\item binary operators take in two propositions and produce a new one;
+\item a proposition of the form $p \imp q$ can be proven by way of
+contradition (see \Cref{thm:proof_by_contradiction});
+\item a predicate is a proposition-valued function of a single or multiple
+variables and a predicate of two variables is known as a relation;
+\item the symbol $\forall$ is called the universal quantifier;
+\item an axiomatic system is a finite sequence of propositions, which are the
+axioms of the system;
+\item a proof of a proposition is a finite sequence of propositions such that
+any proposition in the sequence is an axiom, a tautology, or satisfies the
+\emph{modus ponens} condition;
+\item an axiomatic system is said to be consistent if there exists a
+proposition which cannot be proven from the axions;
+\item propositional logic is consistent.
+\end{itemize}
