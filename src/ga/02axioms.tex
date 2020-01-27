@@ -320,9 +320,9 @@ Let $m = \{a,b\}$. Then $\cP(m)=\{\vn,\{a\},\{b\},\{a,b\}\}$.
 \ee
 
 \br
-If one defines $(a,b) := \{a,\{a,b\}\}$, then the \emph{cartesian product} $x \times y$ of two sets $x$ and $y$, which informally is the set of all ordered pairs of elements of $x$ and $y$, satisfies:
+If one defines $(a,b) := \{\{a\},\{a,b\}\}$, then the \emph{cartesian product} $x \times y$ of two sets $x$ and $y$, which informally is the set of all ordered pairs of elements of $x$ and $y$, satisfies:
 \bse
-x\times y \se \cP(\cP(\bigcup\,\{x, y\})).
+x\times y \se \cP\left(\cP\left(\bigcup\,\{x, y\}\right)\right).
 \ese
 Hence, the existence of $x\times y$ as a set follows from the axioms on unions, pair sets, power sets and the principle of restricted comprehension.
 \er
