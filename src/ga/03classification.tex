@@ -114,8 +114,14 @@ Let $\phi \cl A \to B$ be a map and let $V\se B$. Then we define the set:
 \bse
 \mathrm{preim}_\phi(V) := \{a \in A \mid \phi(a) \in V\}
 \ese
-called the \emph{pre-image} of $V$ under $\phi$.
+called the \emph{pre-image} of $V$ under (with respect to) $\phi$.
 \ed
+
+\br
+If $\phi$ is a bijection, then the preimage of an individual element will
+always be a set with a single element. Otherwise, the preimage can be a set
+with several elements.
+\er
 
 \bp
 Let $\phi \cl A \to B$ be a map, let $U,V \se B$ and $C=\{C_j \mid j \in J\} \se \cP(B)$. Then:
@@ -468,6 +474,3 @@ There are many ways to construct the reals from the rationals. One is to define 
 \R\index{$\R$} := \mathscr{A}/\!\sim,
 \ese
 where $\sim$ is a ``suitable'' equivalence relation on $\mathscr{A}$.
-
-
-
