@@ -355,10 +355,11 @@ The \emph{addition} operation on $\N$ is defined as a map:
 \ed
 
 \br
-In von Neumann's definition of the natural numbers, addition is defined
-through recursion. For $m, n \in \N$, either $n = 0$ or $n = a + 1$ for $a \in
-\N$. In the first case, let $m + n = m + 0 := m$. In the second, let $(m,n)
-\mapsto m + S(a) := S(m + a).$ This definition is not used in this text.
+In von Neumann's definition of the natural numbers, the addition map $+~\cl
+\N\times \N \to \N$ is defined through recursion. For $(m, n) \in \N \times
+\N$, either $n = 0$ or $n = a + 1$ for $a \in \N$. In the first case, let
+$(m,n) \mapsto m + 0 := m$. In the second, let $(m,n) \mapsto m + S(a) := S(m
++ a).$ We do not use this definition in these notes.
 \er
 
 \be
