@@ -54,7 +54,8 @@ Let $M$ be a set. Then $\cO=\{\vn , M\}$ is a topology on $M$. Indeed, we have:
 \item[ii)] $\bigcap\, \{\vn,\vn\} = \vn \in \cO$, $\ \bigcap\, \{\vn,M\} = \vn \in \cO$, and $\bigcap\, \{M,M\} = M \in \cO$;
 \item[iii)] If $M \in C$, then $\bigcup C = M \in \cO$, otherwise $\bigcup C = \vn \in \cO$.
 \een
-This is called the \emph{chaotic topology}\index{topology!chaotic} and can be defined on any set.
+This is called the \emph{chaotic topology}\index{topology!chaotic} (or
+\emph{discrete topology}) and can be defined on any set.
 \ee
 
 \be
@@ -303,12 +304,12 @@ Consider the topological space $(M,\cP(M))$. Then only definitely constant seque
 \ese
 This is immediate from the definition of convergence since in the discrete topology all singleton sets (i.e.\ one-element sets) are open. 
 \ee
-\be
+\bt[Convergence in $\R^d$]\index{convergence!in $\R^d$}
 Consider the topological space $(\R^d,\cO_\mathrm{std})$. Then, a sequence $q\cl \N \to \R^d$ converges against $a\in \R^d$ if:
 \bse
 \forall\, \ve >0 : \exists \, N \in \N : \forall \, n > N : \|q(n)-a\|_2<\ve.
 \ese
-\ee
+\et
 \be
 Let $M=\R$ and let $q=1-\frac{1}{n+1}$. Then, since $q$ is not definitely constant, it is not convergent in $(\R,\cP(\R))$, but it is convergent in $(\R,\cO_\mathrm{std})$.
 \ee
