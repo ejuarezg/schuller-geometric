@@ -341,7 +341,7 @@ Let $(M,\cO)$ be a topological space. Then, for every $p\in M$, we define the \e
 \bd
 Let $\mathscr{L}_p$ be the space of loops at $p\in M$. We define the \emph{concatenation} operation $*\cl \mathscr{L}_p\times\mathscr{L}_p\to\mathscr{L}_p$ by:
 \bse
-(\g * \delta) (\l):= \left\{ \ba{ll} \g(2\l) & \t{if } 0\leq \l \leq \tfrac{1}{2}\\ \delta(2\l-1) & \t{if } \tfrac{1}{2}\leq \l \leq 1 \ea \right.
+(\g * \delta) (\l):= \left\{ \ba{ll} \g(2\l) & \t{if } 0\leq \l < \tfrac{1}{2}\\ \delta(2\l-1) & \t{if } \tfrac{1}{2}\leq \l \leq 1 \ea \right.
 \ese
 \ed
 
@@ -358,7 +358,7 @@ where $\sim$ is the homotopy equivalence relation, together with the map
 \ed
 
 \br
-Recall that a group\index{group} is a pair $(G,\bullet)$ where $G$ is a set and $\bullet \cl G\times G \to G$ is a map (also called \emph{binary operation}) such that:
+A group\index{group} is a pair $(G,\bullet)$ where $G$ is a set and $\bullet \cl G\times G \to G$ is a map (also called \emph{binary operation}) such that:
 \ben
 \item[i)] $\forall \, a,b,c \in G : (a\bullet b)\bullet c = a \bullet (b\bullet c)$;
 \item[ii)] $\exists \, e \in G : \forall \, g \in G : g \bullet e = e \bullet g = g$;
@@ -370,7 +370,7 @@ A \emph{group isomorphism}\index{isomorphism!of groups} between two groups $(G,\
 \bse
 \forall \, a,b \in G:\phi(a \bullet b) = \phi(a)\circ\phi(b).
 \ese
-If there exists a group isomorphism between $(G,\bullet)$ and $(H,\circ)$, we say that $G$ and $H$ are (group theoretic) isomorphic and we write $G \cong_\mathrm{grp} H$.
+If there exists a group isomorphism between $(G,\bullet)$ and $(H,\circ)$, we say that $G$ and $H$ are (group theoretic) isomorphic and we write $(G,\bullet) \cong_\mathrm{grp} (H,\circ)$.
 \er
 
 The operation $\bullet$ is associative (since concatenation is associative); the neutral element of the fundamental group $(\pi_1(p),\bullet)$ is (the equivalence class of) the constant curve $\g_e$ defined by:
