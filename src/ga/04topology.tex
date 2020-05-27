@@ -54,7 +54,8 @@ Let $M$ be a set. Then $\cO=\{\vn , M\}$ is a topology on $M$. Indeed, we have:
 \item[ii)] $\bigcap\, \{\vn,\vn\} = \vn \in \cO$, $\ \bigcap\, \{\vn,M\} = \vn \in \cO$, and $\bigcap\, \{M,M\} = M \in \cO$;
 \item[iii)] If $M \in C$, then $\bigcup C = M \in \cO$, otherwise $\bigcup C = \vn \in \cO$.
 \een
-This is called the \emph{chaotic topology}\index{topology!chaotic} and can be defined on any set.
+This is called the \emph{chaotic topology}\index{topology!chaotic} (or
+\emph{discrete topology}) and can be defined on any set.
 \ee
 
 \be
@@ -221,7 +222,7 @@ M/\!\sim \ = \{[m]\in \cP(M) \mid m \in M\}
 \ese
 can be equipped with the \emph{quotient topology}\index{quotient topology}\index{topology!quotient} $\cO_{M/\sim}$ defined by:
 \bse
-\cO_{M/\sim} := \{U \in M/\!\sim \ \mid \bigcup U = \bigcup_{[a]\in U}[a] \in \cO \}.
+\cO_{M/\sim} := \{U \se M/\!\sim \ \mid \bigcup U = \bigcup_{[a]\in U}[a] \in \cO \}.
 \ese
 \ed
 
@@ -232,7 +233,7 @@ q \cl & M & \to & M/\!\sim \\
 \ei
 Then we have:
 \bse
-\cO_{M/\!\sim} := \{U \in M/\!\sim \ \mid \mathrm{preim}_q(U) \in \cO \}.
+\cO_{M/\!\sim} := \{U \se M/\!\sim \ \mid \mathrm{preim}_q(U) \in \cO \}.
 \ese
 
 \be
@@ -303,12 +304,12 @@ Consider the topological space $(M,\cP(M))$. Then only definitely constant seque
 \ese
 This is immediate from the definition of convergence since in the discrete topology all singleton sets (i.e.\ one-element sets) are open. 
 \ee
-\be
+\bt[Convergence in $\R^d$]\index{convergence!in $\R^d$}
 Consider the topological space $(\R^d,\cO_\mathrm{std})$. Then, a sequence $q\cl \N \to \R^d$ converges against $a\in \R^d$ if:
 \bse
 \forall\, \ve >0 : \exists \, N \in \N : \forall \, n > N : \|q(n)-a\|_2<\ve.
 \ese
-\ee
+\et
 \be
 Let $M=\R$ and let $q=1-\frac{1}{n+1}$. Then, since $q$ is not definitely constant, it is not convergent in $(\R,\cP(\R))$, but it is convergent in $(\R,\cO_\mathrm{std})$.
 \ee
@@ -320,7 +321,7 @@ Let $(M,\cO_M)$ and $(N,\cO_N)$ be topological spaces and let $\phi\cl M\to N$ b
 \bse
 \forall \, S \in \cO_N \, , \ \mathrm{preim}_\phi(S) \in \cO_M ,
 \ese
-where $\mathrm{preim}_\phi(S) := \{m \in M : \phi(m) \in S\}$ is the pre-image of $S$ under the map $\phi$.
+where $\mathrm{preim}_\phi(S) := \{m \in M \mid \phi(m) \in S\}$ is the pre-image of $S$ under the map $\phi$.
 \ed
 Informally, one says that $\phi$ is continuous if the pre-images of open sets are open. 
 \be
